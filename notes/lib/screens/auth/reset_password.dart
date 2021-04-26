@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatefulWidget {
@@ -102,7 +103,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     width: double.infinity,
                     height: 60.0,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        final FirebaseAuth _firebaseAuth =
+                            FirebaseAuth.instance;
+                        await _firebaseAuth.sendPasswordResetEmail(
+                            email: email);
+                      },
                       child: Text(
                         "Send Reset Instructions",
                       ),

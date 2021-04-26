@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:notes/screens/auth/login.dart';
 import 'package:notes/screens/homescreen.dart';
-import 'package:notes/screens/profile/profile.dart';
 import 'package:notes/screens/widgets/showAlert.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +66,7 @@ void signInUserWithEmail(
 
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => ProfileScreen(),
+        builder: (context) => HomeScreen(),
       ),
     );
   } on FirebaseAuthException catch (e) {

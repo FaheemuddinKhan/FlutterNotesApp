@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       statusBarBrightness: Brightness.dark,
     ));
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'StackFinance Notes App',
       theme: ThemeData.dark().copyWith(
         primaryColor: Colors.white,
